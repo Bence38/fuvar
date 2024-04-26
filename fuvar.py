@@ -29,4 +29,14 @@ for fuvar in taxi:
     if fuvar.taxi_id == 6185:
         fuvarSzam +=1
         bevetel += fuvar.viteldij + fuvar.borravalo
-print('4.feladat:' f"{fuvarSzam}fuvar alatt {str(bevetel).replace('.',',')}$")        
+print('4.feladat:' f" {fuvarSzam} fuvar alatt {str(bevetel).replace('.',',')}$")    
+
+stat = {}
+for fuvar in taxi:
+    if fuvar.fizetes_modja in stat.keys():
+        stat[fuvar.fizetes_modja] += 1
+    else:
+        stat[fuvar.fizetes_modja] = 1
+print('5.feladat')
+for k,v in stat.items():
+    print(f"\t{k}: {v} fuvar")
