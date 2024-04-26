@@ -17,7 +17,7 @@ taxi = []
 
 for sor in f:
     sor = sor.strip().split(';')
-    print(sor)
+    #print(sor)
     taxi.append(Fuvarok(sor[0], sor[1], sor[2], sor[3], sor[4], sor[5], sor[6]))
 f.close()
 
